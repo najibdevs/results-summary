@@ -1,46 +1,144 @@
+/* reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+    font-family: "Karla", sans-serif;
+  }
+  
+  body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.single-price-grid {
-    max-width: 45rem;
-    background: red;
+    background-color: #d3d3d3;
+  }
+  
+  /* price grid component */
+  .price-grid {
+    max-width: 39rem;
+    background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
-}
-
-.community-section {
-    padding: 2.7rem;
-}
-
-.subscription-details {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* community section */
+  .community-section {
+    padding: 2rem;
+  }
+  
+  .community-section__heading {
+    color: #2ab2af;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .community-section__guarantee {
+    color: #c0df34;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .community-section__description {
+    color: #98a6bd;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.7rem;
+  }
+  
+  /* subscription section */
+  .subscription-section {
     display: flex;
-    background: hsl(179, 62%, 43%);
-}
-
-.monthly-subscription {
+  }
+  
+  /* monthly subscription */
+  .monthly-subscription {
     width: 50%;
     padding: 2rem;
-}
-
-.why-us-section {
-    background: hsl(71, 73%, 54%);
+    background-color: #26aba8;
+    color: #e5eff5;
+  }
+  
+  .monthly-subscription__heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .monthly-subscription__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .monthly-subscription__price-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+  
+  .monthly-subscription__price-period {
+    color: #a2cfce;
+  }
+  
+  .monthly-subscription__description {
+    margin-bottom: 2rem;
+  }
+  
+  .monthly-subscription__button {
+    border: none;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background-color: #c0df34;
+    color: #e5eff5;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .monthly-subscription__button:hover {
+    background-color: #a9c42d;
+  }
+  
+  /* why us section */
+  .why-us-section {
     width: 50%;
     padding: 2rem;
-}
-
-@media (max-width: 730px) {
-    .community-section {
-        flex-direction: column;
+    background-color: #2ab2af;
+    color: #e5eff5;
+  }
+  
+  .why-us-section__heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .why-us-section__description {
+    color: #a2cfce;
+    line-height: 1.5;
+  }
+  
+  /* responsive design */
+  @media (max-width: 650px) {
+    .price-grid {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-inline: 1rem;
     }
-}
+  
+    .subscription-section {
+      flex-direction: column;
+    }
+  
+    .monthly-subscription,
+    .why-us-section {
+      width: 100%;
+    }
+  }
